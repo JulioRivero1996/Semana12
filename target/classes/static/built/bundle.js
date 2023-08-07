@@ -34083,8 +34083,9 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function (r
 
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-var App = __webpack_require__(/*! ./pages/home */ "./src/main/js/pages/home.js");
-ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElementById('react'));
+var PagesHome = __webpack_require__(/*! ./pages/home */ "./src/main/js/pages/home.js");
+var PagesNuevoMusico = __webpack_require__(/*! ./pages/nuevo-musico */ "./src/main/js/pages/nuevo-musico.js");
+ReactDOM.render( /*#__PURE__*/React.createElement(PagesNuevoMusico, null), document.getElementById('react'));
 
 /***/ }),
 
@@ -34139,12 +34140,12 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var client = __webpack_require__(/*! ../client */ "./src/main/js/client.js");
-var App = /*#__PURE__*/function (_React$Component) {
-  _inherits(App, _React$Component);
-  var _super = _createSuper(App);
-  function App(props) {
+var PagesHome = /*#__PURE__*/function (_React$Component) {
+  _inherits(PagesHome, _React$Component);
+  var _super = _createSuper(PagesHome);
+  function PagesHome(props) {
     var _this;
-    _classCallCheck(this, App);
+    _classCallCheck(this, PagesHome);
     _this = _super.call(this, props);
     _this.state = {
       instrumentos: [],
@@ -34152,7 +34153,7 @@ var App = /*#__PURE__*/function (_React$Component) {
     };
     return _this;
   }
-  _createClass(App, [{
+  _createClass(PagesHome, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this2 = this;
@@ -34187,7 +34188,7 @@ var App = /*#__PURE__*/function (_React$Component) {
       }));
     }
   }]);
-  return App;
+  return PagesHome;
 }(React.Component); // class Titulo extends React.Component{
 // 	render(){
 // 		return(
@@ -34288,7 +34289,23 @@ var Musico = /*#__PURE__*/function (_React$Component5) {
   }]);
   return Musico;
 }(React.Component);
-module.exports = App;
+module.exports = PagesHome;
+
+/***/ }),
+
+/***/ "./src/main/js/pages/nuevo-musico.js":
+/*!*******************************************!*\
+  !*** ./src/main/js/pages/nuevo-musico.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _require = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"),
+  render = _require.render;
+var PageNuevoMusico = function PageNuevoMusico() {
+  render( /*#__PURE__*/React.createElement("h2", null, "Nuevo Musico"));
+};
+module.exports = PageNuevoMusico;
 
 /***/ }),
 
