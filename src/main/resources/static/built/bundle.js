@@ -40805,7 +40805,7 @@ var router = createBrowserRouter([{
   path: '/',
   element: /*#__PURE__*/React.createElement(PagesHome, null)
 }, {
-  path: '/nuevomusico',
+  path: '/nuevo-musico',
   element: /*#__PURE__*/React.createElement(PagesNuevoMusico, null)
 }]);
 ReactDOM.render( /*#__PURE__*/React.createElement(React.StrictMode, null, /*#__PURE__*/React.createElement(RouterProvider, {

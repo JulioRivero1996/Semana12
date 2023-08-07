@@ -7,7 +7,7 @@ const PagesNuevoMusico = require('./pages/nuevo-musico')
 
 const router = createBrowserRouter([
 	{path: '/', element:  <PagesHome />},
-	{path: '/nuevomusico', element: <PagesNuevoMusico />}
+	{path: '/nuevo-musico', element: <PagesNuevoMusico />}
 ])
 
 ReactDOM.render(
