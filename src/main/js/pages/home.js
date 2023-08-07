@@ -19,10 +19,13 @@ class PagesHome extends React.Component {
 	render() {
 		return (
 			<>	
+				<h1>Aplicación Demo</h1>
 				<Titulo entidad="Instrumento" />
-				<InstrumentoList instrumentos={this.state.instrumentos}/>
-				<Titulo entidad="Musico" />
-				<MusicoList musicos={this.state.musicos}/>
+				<InstrumentoList instrumentos={this.state.instrumentos} />
+				<Titulo entidad="Músico" />
+				<MusicoList musicos={this.state.musicos} />
+				<br />
+				<Link to="/nuevo-musico">Nuevo Músico</Link>
 			</>
 		)
 	}

@@ -1,9 +1,14 @@
-const {render} = require("react")
+const React = require("react");
+const {Link} = require("react-router-dom");
 
-const PageNuevoMusico = () => {
-    render(
-        <h2>Nuevo Musico</h2>
-    )
+
+function PageNuevoMusico(){
+    return(
+        <>
+            <h1>Nuevo Musico</h1>
+            <Link to="/">Volver</Link>
+        </>
+    );
 }
 
 module.exports = PageNuevoMusico

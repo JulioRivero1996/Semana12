@@ -40801,7 +40801,16 @@ var _require = __webpack_require__(/*! react-router-dom */ "./node_modules/react
   RouterProvider = _require.RouterProvider;
 var PagesHome = __webpack_require__(/*! ./pages/home */ "./src/main/js/pages/home.js");
 var PagesNuevoMusico = __webpack_require__(/*! ./pages/nuevo-musico */ "./src/main/js/pages/nuevo-musico.js");
-var router = ReactDOM.render( /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PagesHome, null), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(PagesNuevoMusico, null)), document.getElementById('react'));
+var router = createBrowserRouter([{
+  path: '/',
+  element: /*#__PURE__*/React.createElement(PagesHome, null)
+}, {
+  path: '/nuevomusico',
+  element: /*#__PURE__*/React.createElement(PagesNuevoMusico, null)
+}]);
+ReactDOM.render( /*#__PURE__*/React.createElement(React.StrictMode, null, /*#__PURE__*/React.createElement(RouterProvider, {
+  router: router
+})), document.getElementById('react'));
 
 /***/ }),
 
@@ -40856,6 +40865,8 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var client = __webpack_require__(/*! ../client */ "./src/main/js/client.js");
+var _require = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js"),
+  Link = _require.Link;
 var PagesHome = /*#__PURE__*/function (_React$Component) {
   _inherits(PagesHome, _React$Component);
   var _super = _createSuper(PagesHome);
@@ -40893,15 +40904,17 @@ var PagesHome = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Titulo, {
+      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Aplicaci\xF3n Demo"), /*#__PURE__*/React.createElement(Titulo, {
         entidad: "Instrumento"
       }), /*#__PURE__*/React.createElement(InstrumentoList, {
         instrumentos: this.state.instrumentos
       }), /*#__PURE__*/React.createElement(Titulo, {
-        entidad: "Musico"
+        entidad: "M\xFAsico"
       }), /*#__PURE__*/React.createElement(MusicoList, {
         musicos: this.state.musicos
-      }));
+      }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Link, {
+        to: "/nuevo-musico"
+      }, "Nuevo M\xFAsico"));
     }
   }]);
   return PagesHome;
@@ -41016,11 +41029,14 @@ module.exports = PagesHome;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _require = __webpack_require__(/*! react */ "./node_modules/react/index.js"),
-  render = _require.render;
-var PageNuevoMusico = function PageNuevoMusico() {
-  render( /*#__PURE__*/React.createElement("h2", null, "Nuevo Musico"));
-};
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var _require = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js"),
+  Link = _require.Link;
+function PageNuevoMusico() {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Musico"), /*#__PURE__*/React.createElement(Link, {
+    to: "/"
+  }, "Volver"));
+}
 module.exports = PageNuevoMusico;
 
 /***/ }),
