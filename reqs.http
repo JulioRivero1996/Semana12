@@ -1,0 +1,13 @@
+@server = https://texai-redesigned-sniffle-q9pqwgjg939rq5-8080.preview.app.github.dev
+@instrumentos = {{server}}/api/instrumentos
+###
+GET {{instrumentos}}
+###
+POST {{instrumentos}}
+Content-Type: application/json
+
+{
+  "nombre" : "Quena",
+  "categoria" : "Instrumento de viento",
+  "descripcion" : "tubo con orificios que al taparlos hacen sonar diferentes notas"
+}
