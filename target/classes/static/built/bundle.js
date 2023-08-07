@@ -34085,7 +34085,7 @@ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 var PagesHome = __webpack_require__(/*! ./pages/home */ "./src/main/js/pages/home.js");
 var PagesNuevoMusico = __webpack_require__(/*! ./pages/nuevo-musico */ "./src/main/js/pages/nuevo-musico.js");
-ReactDOM.render( /*#__PURE__*/React.createElement(PagesNuevoMusico, null), document.getElementById('react'));
+ReactDOM.render( /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PagesHome, null), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(PagesNuevoMusico, null)), document.getElementById('react'));
 
 /***/ }),
 
@@ -34300,7 +34300,7 @@ module.exports = PagesHome;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _require = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"),
+var _require = __webpack_require__(/*! react */ "./node_modules/react/index.js"),
   render = _require.render;
 var PageNuevoMusico = function PageNuevoMusico() {
   render( /*#__PURE__*/React.createElement("h2", null, "Nuevo Musico"));

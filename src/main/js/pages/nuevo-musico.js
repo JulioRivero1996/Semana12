@@ -1,4 +1,4 @@
-const {render} = require("react-dom")
+const {render} = require("react")
 
 const PageNuevoMusico = () => {
     render(

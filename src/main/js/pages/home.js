@@ -1,5 +1,7 @@
 const React = require('react');
 const client = require('../client');
+const { Link } = require('react-router-dom');
+
 
 class PagesHome extends React.Component {
 	constructor(props) {
