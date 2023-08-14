@@ -41033,7 +41033,16 @@ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var _require = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js"),
   Link = _require.Link;
 function PageNuevoMusico() {
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Musico"), /*#__PURE__*/React.createElement(Link, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Musico"), /*#__PURE__*/React.createElement("form", null, /*#__PURE__*/React.createElement("label", {
+    htmlFor: "nombre"
+  }, "Nombre: "), /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    id: "nombre",
+    name: "nombre"
+  }), /*#__PURE__*/React.createElement("input", {
+    type: "submit",
+    value: "Nuevo Musico"
+  })), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Link, {
     to: "/"
   }, "Volver"));
 }
